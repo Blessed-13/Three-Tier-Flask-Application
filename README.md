@@ -7,6 +7,7 @@
 
   The system is orchestrated using Docker Compose and designed with production best practices including reverse proxy configuration, 
   service-based networking, environment isolation, and health checks.
+  
 ---
 ## 🏗 Architecture
 
@@ -15,6 +16,7 @@
 - **Database Tier:** MySQL 8.0 with persistent volume  
 - **Orchestration:** Docker Compose  
 - **Future CI/CD:** Jenkins + Trivy (planned)
+  
   --- 
 ## 🚀 Features
  -Reverse proxy using Nginx
@@ -24,6 +26,7 @@
  -Docker internal DNS communication
  -Health check with service dependency
  -Secure configuration via .env (excluded from Git)
+ 
 ---
 ## 📂 Project Structure
  .
@@ -33,6 +36,7 @@
  ├── docker-compose.yml
  ├── .dockerignore
  └── README.md
+ 
 ---
 ## 🛠 How to Run Locally
  1.Create a .env file with required variables.
@@ -40,6 +44,7 @@
     'docker compose up --build'
  3.Access application:
     'http://localhost'
+    
 ---
 ## 🔐 Security Practices
   -.env excluded from Git
@@ -47,6 +52,7 @@
   -MySQL not exposed publicly
   -Internal container networking
   -Planned image vulnerability scanning using Trivy
+  
 ---
 ## 🔄 Roadmap
   -Jenkins CI/CD pipeline
