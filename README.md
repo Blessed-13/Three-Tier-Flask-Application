@@ -19,13 +19,13 @@
   
   --- 
 ## 🚀 Features
- -Reverse proxy using Nginx
- -Gunicorn production WSGI server
- -MySQL persistent storage using Docker volumes
- -Environment variable–based configuration
- -Docker internal DNS communication
- -Health check with service dependency
- -Secure configuration via .env (excluded from Git)
+ - Reverse proxy using Nginx
+ - Gunicorn production WSGI server
+ - MySQL persistent storage using Docker volumes
+ - Environment variable–based configuration
+ - Docker internal DNS communication
+ - Health check with service dependency
+ - Secure configuration via .env (excluded from Git)
  
 ---
 ## 📂 Project Structure
@@ -39,25 +39,26 @@
  
 ---
 ## 🛠 How to Run Locally
- 1.Create a .env file with required variables.
- 2.Build and start containers:
-    'docker compose up --build'
- 3.Access application:
-    'http://localhost'
+
+1. Create a `.env` file with required variables.  
+2. Build and start containers:
+     ' docker compose up --build '
+3.  Access application: 
+     ' http://localhost '
     
 ---
 ## 🔐 Security Practices
-  -.env excluded from Git
-  -.env excluded from Docker build context
-  -MySQL not exposed publicly
-  -Internal container networking
-  -Planned image vulnerability scanning using Trivy
+  - .env excluded from Git
+  - .env excluded from Docker build context
+  - MySQL not exposed publicly
+  - Internal container networking
+  - Planned image vulnerability scanning using Trivy
   
 ---
 ## 🔄 Roadmap
-  -Jenkins CI/CD pipeline
-  -Docker image vulnerability scanning with Trivy
-  -Automated image push to Docker Hub / AWS ECR
-  -EC2 provisioning via Ansible
-  -Future project: Kubernetes + ArgoCD GitOps deployment
+  - Jenkins CI/CD pipeline
+  - Docker image vulnerability scanning with Trivy
+  - Automated image push to Docker Hub / AWS ECR
+  - EC2 provisioning via Ansible
+  - Future project: Kubernetes + ArgoCD GitOps deployment
 
