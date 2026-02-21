@@ -67,7 +67,7 @@
 
 Infrastructure provisioning and CI/CD automation for this project is implemented in a separate repository:
 
-👉 [two-tier-devops-infra](LINK_HERE)
+👉 [two-tier-devops-infra](https://github.com/Blessed-13/Two-Tier-devops-infra)
 
 Includes:
 - Ansible-based EC2 provisioning
