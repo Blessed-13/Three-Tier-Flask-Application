@@ -44,10 +44,14 @@ pipeline {
             }
         }
 
-        stage('Deploy to App Server') {
+        stage('Deploy via Ansible') {
             steps {
                 sshagent(['ec2-key']) {
-                    sh 'ansible-playbook -i inventory playbooks/deploy.yml'
+                  sh '''
+                    git clone https://github.com/Blessed-13/Two-Tier-devops-infra.git
+                    cd infra
+                    ansible-playbook -i inventory playbooks/deploy.yml
+                    '''
                 }
             }
         }
