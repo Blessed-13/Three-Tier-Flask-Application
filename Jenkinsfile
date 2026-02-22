@@ -47,11 +47,12 @@ pipeline {
         stage('Deploy via Ansible') {
             steps {
                 sshagent(['ec2-key']) {
-                  sh '''
-                    git clone https://github.com/Blessed-13/Two-Tier-devops-infra.git
-                    cd infra
-                    ansible-playbook -i inventory playbooks/deploy.yml
-                    '''
+                  dir('infra') {
+                    git branch: 'main',
+                      url: 'https://github.com/Blessed-13/Two-Tier-devops-infra.git'
+
+                    sh 'ansible-playbook -i inventory playbooks/deploy.yml'
+                  }
                 }
             }
         }
