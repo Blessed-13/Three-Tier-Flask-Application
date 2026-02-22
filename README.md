@@ -74,3 +74,4 @@ Includes:
 - Jenkins automation
 - Trivy vulnerability scanning
 - Docker image build & push pipeline
+- Separate server for jenkins and app
